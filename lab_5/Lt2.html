@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Admission Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 60%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        fieldset {
+            border: 2px solid #1e90ff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #1e90ff;
+            padding: 5px 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 96%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: 120px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="reset"] {
+            background-color: #777;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0b6fd4;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #555;
+        }
+
+        .inline {
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>University Admission Form</h1>
+
+    <form>
+
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fname">Full Name:</label>
+            <input type="text" id="fname" name="fname" required maxlength="50">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" class="inline" required> Male
+            <input type="radio" name="gender" value="Female" class="inline" required> Female
+            <input type="radio" name="gender" value="Other" class="inline" required> Other
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+        </fieldset>
+
+        <!-- Academic Information -->
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <label for="hsc">HSC GPA:</label>
+            <input type="text" id="hsc" name="hsc" required maxlength="5">
+
+            <label for="ssc">SSC GPA:</label>
+            <input type="text" id="ssc" name="ssc" required maxlength="5">
+
+            <label>Areas of Interest:</label>
+            <input type="checkbox" name="interest" value="Science" class="inline"> Science
+            <input type="checkbox" name="interest" value="Business" class="inline"> Business
+            <input type="checkbox" name="interest" value="Arts" class="inline"> Arts
+
+            <label for="department">Preferred Department:</label>
+            <select id="department" name="department" required>
+                <option value="">-- Select Department --</option>
+                <option value="CSE">Computer Science & Engineering</option>
+                <option value="EEE">Electrical & Electronic Engineering</option>
+                <option value="BBA">Bachelor of Business Administration</option>
+                <option value="ENG">English</option>
+                <option value="LAW">Law</option>
+            </select>
+
+        </fieldset>
+
+        <!-- Document Upload -->
+        <fieldset>
+            <legend>Required Documents</legend>
+
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo" required>
+
+            <label for="transcript">Upload Transcript:</label>
+            <input type="file" id="transcript" name="transcript" required>
+        </fieldset>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+
+    </form>
+
+</body>
+</html>
